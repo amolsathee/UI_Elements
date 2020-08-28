@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile Menu - jQuery Plugin</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.4.1.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="jquery-simple-mobilemenu.js"></script>
+</head>
+
+<body class="">
+
+
+  <div class="mobile-membership-wrapper">
+
+ 
+    <div class="menu-wrap">
+
+     
+
+      <div class="mobile-mockup-wrap" id="membershipMenu">
+         
+
+        <div class="membershipInfo-main-wrapper">
+          <div class="membership-main-header">
+              <div class="title">
+                  <h2 class="">Membership</h2>
+                  
+              </div>
+          </div>
+        </div>
+
+        <ul class="mobile_menu membership-main-menu">
+          <li>
+              <a href="javascript:void(0);">Classic Membership</a>
+              <ul class="membership-submenu">
+                  <div class="membership-info-wrap">
+                      <div>
+                        Classic Membership
+                        <p>will pay. Oh, God, I pant. The only one who doesn’t surprise</p>
+                        <p>will pay. Oh, God, I pant. The only one who doesn’t surprise</p>
+                        <p>will pay. Oh, God, I pant. The only one who doesn’t surprise</p>
+                        <p>will pay. Oh, God, I pant. The only one who doesn’t surprise</p>
+                        <p>will pay. Oh, God, I pant. The only one who doesn’t surprise</p>
+                        <p>will pay. Oh, God, I pant. The only one who doesn’t surprise</p>
+                        <p>will pay. Oh, God, I pant. The only one who doesn’t surprise</p>
+                      </div>
+                  </div>
+              </ul>
+          </li>
+          <li>
+              <a href="javascript:void(0);">Silver Membership</a>
+              <ul class="membership-submenu">
+                  <div class="membership-info-wrap">
+                      <div>
+                        Silver Membership
+                      </div>
+                  </div>
+              </ul>
+          </li>
+          <li>
+              <a href="javascript:void(0);">Gold Membership</a>
+              <ul class="membership-submenu">
+                  <div class="membership-info-wrap">
+                      <div>
+                        Gold Membership
+                      </div>
+                  </div>
+              </ul>
+          </li>
+          <li>
+              <a href="javascript:void(0);">Platinum Membership</a>
+              <ul class="membership-submenu">
+                  <div class="membership-info-wrap">
+                      <div>
+                        Platinum Membership
+                      </div>
+                  </div>
+              </ul>
+          </li>
+        </ul>
+        
+
+
+        <div class="about-main-wrapper">
+            About Enrich Membership
+        </div>
+
+
+        
+
+      </div>
+
+    </div>
+
+  </div>
+   
+<script>
+            $(document).ready(function() {
+                $(".mobile_menu").simpleMobileMenu({
+                    onMenuLoad: function(menu) {
+                        console.log(menu)
+                        console.log("menu loaded")
+                    },
+                    onMenuToggle: function(menu, opened) {
+                        console.log(opened)
+                    },
+                    "menuStyle": "slide"
+                });
+            })
+        </script>
+</body>
+
+</html>

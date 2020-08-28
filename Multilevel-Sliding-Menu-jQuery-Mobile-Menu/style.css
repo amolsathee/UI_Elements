@@ -1,0 +1,157 @@
+
+
+body.mmactive {
+  overflow: hidden;
+}
+
+
+.back {
+    color: #FFF;
+    background: #222;
+}
+.menu-wrap {
+    width: 100%;
+    padding: 0;
+    float: left;
+    position: relative;
+}
+
+.show-in-mobile {
+    display: none;
+}
+
+.membership-menu-outer.active .mobile_menu {
+  display: block;
+}
+.membership-menu-outer {
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -9;
+  width: 100%;
+  opacity: 0;
+  background-color: #000;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+
+/*Hamburger Animation */
+#membership-menu-ham {
+  cursor: pointer;
+  float: right;
+  
+  position: absolute;
+  right: 5px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  width: auto;
+  top: 25px;
+  right: 15px;
+  z-index: 9999;
+}
+
+
+.mobile_menu {
+  display: none;
+  position: relative;
+  margin: 0px;
+                    padding: 0px;
+}
+.membership-menu-outer.active .mobile_menu {
+  display: block;
+}
+
+.membership-menu-outer.active {
+  opacity: 1;
+  z-index: 999;
+}
+
+
+.membership-menu-outer .mobile_menu li.back a {
+  padding: 20px 5px 20px 55px;
+  background: url("../images/back.png") no-repeat scroll 15px center / 5% auto;
+}
+.membership-menu-outer .mobile_menu a {
+  color: #ffffff;
+  display: block;
+  font: 300 18px/140% "Lato", sans-serif;
+  letter-spacing: 1px;
+  padding: 20px 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.membership-menu-outer.slide .mobile_menu .membership-submenu {
+  background-color: #000000;
+  height: 100%;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  z-index: 999;
+  padding: 0px;
+}
+.membership-menu-outer.slide .mobile_menu li.active > .membership-submenu {
+  right: 0;
+}
+.membership-menu-outer .mobile_menu li {
+  list-style-type: none;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0);
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #2a2a2a 20%, #2a2a2a 50%, #2a2a2a 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
+  color: #ffffff;
+}
+.membership-menu-outer.slide .mobile_menu li.hasChild > a {
+  background: url("../images/next.png") no-repeat scroll 95% center / 5% auto;
+}
+
+
+.membershipInfo-main-wrapper .membership-main-header .title h2 {
+     background: #fafafa;
+     color: #333;
+}
+body.membership-active .membershipInfo-main-wrapper .membership-main-header .title h2 {
+     display: none;
+}
+ body.membership-active #membership-menu-ham {
+     position: relative;
+     width: 100%;
+     left: 0px;
+     right: 0px;
+}
+ body.membership-active #membership-menu-ham:before {
+     content: '<';
+     display: block;
+     width: 30px;
+     height: 30px;
+     line-height: 30px;
+     position: absolute;
+}
+ body.membership-active #membership-menu-ham:after {
+     content: 'Membership Plan';
+     display: block;
+     width: 100%;
+}
+ 
+
+
+@media (min-width: 0px) and (max-width: 767px) {
+    
+    .menu-wrap {
+        float: none;
+        height: auto;
+        width: 100%;
+    }
+    
+}
+
+
